@@ -1,0 +1,115 @@
+{
+ "pass2_used_for_adjudication": {
+  "agree": 126,
+  "disagree": 74,
+  "kappa3": 0.07227480724628599,
+  "n_binary": 149,
+  "kappa_bin": 0.21578947368421053,
+  "pos_agree": 0.29411764705882354,
+  "neg_agree": 0.9090909090909091,
+  "pabak": 0.6778523489932886,
+  "unc_r1": 45,
+  "unc_r2": 7,
+  "crosstab": [
+   [
+    5,
+    18,
+    0
+   ],
+   [
+    6,
+    120,
+    6
+   ],
+   [
+    5,
+    39,
+    1
+   ]
+  ]
+ },
+ "pass1_blinded_sheet": {
+  "agree": 113,
+  "disagree": 87,
+  "kappa3": 0.12240883643516409,
+  "n_binary": 128,
+  "kappa_bin": 0.18336483931947067,
+  "pos_agree": 0.3076923076923077,
+  "neg_agree": 0.8755760368663594,
+  "pabak": 0.578125,
+  "unc_r1": 45,
+  "unc_r2": 39,
+  "crosstab": [
+   [
+    6,
+    14,
+    3
+   ],
+   [
+    13,
+    95,
+    24
+   ],
+   [
+    7,
+    26,
+    12
+   ]
+  ]
+ },
+ "r2_versions_identical": 146,
+ "r2_versions_crosstab": [
+  [
+   13,
+   11,
+   2
+  ],
+  [
+   3,
+   130,
+   2
+  ],
+  [
+   0,
+   36,
+   3
+  ]
+ ],
+ "adjudication": {
+  "n_adjudicated": 74,
+  "labels": {
+   "misconfigured": 35,
+   "no_confirmed_misconfiguration": 23,
+   "uncertain": 16
+  },
+  "final": {
+   "no_confirmed_misconfiguration": 143,
+   "misconfigured": 40,
+   "uncertain": 17
+  },
+  "final_pos_agreed": 5,
+  "final_pos_adjudicated": 35,
+  "eq_r1": 20,
+  "eq_r2": 34,
+  "eq_neither": 20
+ },
+ "sampling": {
+  "cells": {
+   "(0, 0.0)": 67,
+   "(0, 1.0)": 92,
+   "(1, 0.0)": 141,
+   "(1, 1.0)": 363
+  },
+  "weights": {
+   "(0, 0.0)": 1.34,
+   "(0, 1.0)": 1.84,
+   "(1, 0.0)": 2.82,
+   "(1, 1.0)": 7.26
+  },
+  "repos": 188,
+  "max_per_repo": 4
+ },
+ "r2_pass2_unique_evidence": 32,
+ "r2_pass2_second_pass_prefix": 177,
+ "r2_pass1_unique_evidence": 78
+}

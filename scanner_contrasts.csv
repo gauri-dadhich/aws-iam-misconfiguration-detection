@@ -1,0 +1,4 @@
+a,b,diff,lo,hi
+Custom rules (all 14),Checkov (default scope),10.64685314685314,-1.333650482259679,22.826086956521735
+"Custom rules (IAM, function-URL, permission, cross-resource)",Checkov (security-only allow-list),19.851398601398614,11.782673084042955,28.03623432152501
+"Custom rules (IAM, function-URL, permission, cross-resource)",Custom rules (all 14),11.783216783216794,5.5533470059054135,17.587311361326144
