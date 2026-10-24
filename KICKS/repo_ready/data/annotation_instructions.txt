@@ -1,0 +1,14 @@
+Expert-labelled subset: annotation instructions
+
+Sample: 200 templates, 50 from each scanner-outcome category, selected from the 663 templates with Checkov labels.
+Sampling: fixed random seed 20261019; one template per repository within each category where possible, to reduce within-repository dependence.
+IMPORTANT: scanner categories are sampling strata only, NOT ground-truth labels. Reviewers must not treat either scanner output as correct.
+
+Review each YAML independently using the agreed security rubric and available template context.
+Allowed labels:
+- misconfigured: concrete security-relevant misconfiguration supported by evidence in the template.
+- no_confirmed_misconfiguration: no such issue can be established from available evidence (does NOT prove deployed security).
+- uncertain: intent/context is insufficient or the rule requires context not present in the template.
+
+For every label, record concise evidence and confidence. Do not infer that a public endpoint is wrong merely because it is public; assess whether authentication/access control is appropriate for the apparent use and what the template actually specifies. Do not label missing external context as a confirmed vulnerability.
+Two reviewers must label independently and should not see each other's labels. Ideally hide scanner_cell and scanner labels from reviewers during annotation; use the separate CSV columns only for coordinator sampling/analysis. After independent annotation, compute Cohen's kappa on the two reviewers' nominal labels before adjudication. Resolve disagreements using a documented adjudication process.

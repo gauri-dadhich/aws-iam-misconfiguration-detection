@@ -1,0 +1,49 @@
+# Auto-generated research wrapper for Checkov comparison.
+# Source: CloudFix/fixmypolicy real-world AWS IAM policy 74.json
+# The policy JSON below is preserved from the source policy.
+resource "aws_iam_policy" "policy" {
+  name   = "cloudfix_policy_74"
+  path   = "/"
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSLogDeliveryAclCheck",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "delivery.logs.amazonaws.com"
+      },
+      "Action": "s3:GetBucketAcl",
+      "Resource": "arn:aws:s3:::qa-nlb-lo",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "account-no"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:elasticloadbalancing:ap-south-1:account-no:*"
+        }
+      }
+    },
+    {
+      "Sid": "AWSLogDeliveryWrite",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "delivery.logs.amazonaws.com"
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::qa-nlb-lo/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "account-no",
+          "s3:x-amz-acl": "bucket-owner-full-control"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:elasticloadbalancing:ap-south-1:account-no:*"
+        }
+      }
+    }
+  ]
+}
+POLICY
+}

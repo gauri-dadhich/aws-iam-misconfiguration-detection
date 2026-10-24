@@ -1,0 +1,45 @@
+# Auto-generated research wrapper for Checkov comparison.
+# Source: CloudFix/fixmypolicy real-world AWS IAM policy 263.json
+# The policy JSON below is preserved from the source policy.
+resource "aws_iam_policy" "policy" {
+  name   = "cloudfix_policy_263"
+  path   = "/"
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": [
+        "arn:aws:s3:::test-transferfamily-demo",
+        "arn:aws:s3:::sftp-demo2"
+      ],
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": [
+            "${transfer:UserName}/*",
+            "test-transferfamily-demo/${transfer:UserName}/*",
+            "sftp-demo2/${transfer:UserName}/*"
+          ]
+        }
+      },
+      "Sid": "statement1"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::test-transferfamily-demo/${transfer:UserName}/*",
+        "arn:aws:s3:::sftp-demo2/${transfer:UserName}/*"
+      ],
+      "Sid": "statement2"
+    }
+  ]
+}
+POLICY
+}

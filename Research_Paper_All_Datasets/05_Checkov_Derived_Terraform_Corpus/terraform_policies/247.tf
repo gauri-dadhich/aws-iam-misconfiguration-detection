@@ -1,0 +1,78 @@
+# Auto-generated research wrapper for Checkov comparison.
+# Source: CloudFix/fixmypolicy real-world AWS IAM policy 247.json
+# The policy JSON below is preserved from the source policy.
+resource "aws_iam_policy" "policy" {
+  name   = "cloudfix_policy_247"
+  path   = "/"
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "athena:GetDatabase",
+        "athena:GetDataCatalog",
+        "athena:GetTableMetadata",
+        "athena:ListDatabases",
+        "athena:ListDataCatalogs",
+        "athena:ListTableMetadata",
+        "athena:ListWorkGroups"
+      ],
+      "Resource": [
+        "*"
+      ],
+      "Sid": "statement1"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "athena:GetQueryExecution",
+        "athena:GetQueryResults",
+        "athena:GetWorkGroup",
+        "athena:StartQueryExecution",
+        "athena:StopQueryExecution"
+      ],
+      "Resource": [
+        "*"
+      ],
+      "Sid": "statement2"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase",
+        "glue:GetDatabases",
+        "glue:GetTable",
+        "glue:GetTables",
+        "glue:GetPartition",
+        "glue:GetPartitions",
+        "glue:BatchGetPartition"
+      ],
+      "Resource": [
+        "*"
+      ],
+      "Sid": "statement3"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetBucketLocation",
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:ListBucketMultipartUploads",
+        "s3:ListMultipartUploadParts",
+        "s3:AbortMultipartUpload",
+        "s3:CreateBucket",
+        "s3:PutObject",
+        "s3:PutBucketPublicAccessBlock"
+      ],
+      "Resource": [
+        "arn:aws:s3:::grafana-athena-query-results-*"
+      ],
+      "Sid": "statement4"
+    }
+  ]
+}
+POLICY
+}

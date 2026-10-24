@@ -1,0 +1,14 @@
+{
+ "custom-flagged only by API_NO_AUTHORIZER": {
+  "n": 46,
+  "positives": 3
+ },
+ "custom-flagged by any other rule": {
+  "n": 40,
+  "positives": 24
+ },
+ "not flagged by the custom rules": {
+  "n": 97,
+  "positives": 13
+ }
+}

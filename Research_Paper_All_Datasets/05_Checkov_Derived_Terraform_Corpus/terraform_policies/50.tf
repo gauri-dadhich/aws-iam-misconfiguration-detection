@@ -1,0 +1,48 @@
+# Auto-generated research wrapper for Checkov comparison.
+# Source: CloudFix/fixmypolicy real-world AWS IAM policy 50.json
+# The policy JSON below is preserved from the source policy.
+resource "aws_iam_policy" "policy" {
+  name   = "cloudfix_policy_50"
+  path   = "/"
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "HadoopPolicy",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeSecurityGroups",
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:CreateSecurityGroup",
+        "ec2:DeleteSecurityGroup",
+        "ec2:*"
+      ],
+      "Resource": [
+        "arn:aws:ec2:my-region:XXXXXXXXXXX:security-group/sg-SLAVE",
+        "arn:aws:ec2:my-region:XXXXXXXXXXX:security-group/sg-MASTER",
+        "arn:aws:ec2:my-region:XXXXXXXXXXX:subnet/my-subnet-with-internet-access",
+        "arn:aws:ec2:my-region:XXXXXXXXXXX:*"
+      ]
+    },
+    {
+      "Sid": "AllowReadAccesstoKey",
+      "Effect": "Allow",
+      "Action": [
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:ReEncrypt*",
+        "kms:GenerateDataKey*",
+        "kms:DescribeKey",
+        "kms:CreateGrant",
+        "kms:ListGrants"
+      ],
+      "Resource": "arn:aws:kms:my-region:XXXXXXXXXXX:key/my-kms-cmk-id"
+    }
+  ]
+}
+POLICY
+}

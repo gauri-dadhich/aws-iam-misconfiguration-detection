@@ -1,0 +1,43 @@
+# Auto-generated research wrapper for Checkov comparison.
+# Source: CloudFix/fixmypolicy real-world AWS IAM policy 131.json
+# The policy JSON below is preserved from the source policy.
+resource "aws_iam_policy" "policy" {
+  name   = "cloudfix_policy_131"
+  path   = "/"
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ThesePermissionsWillHaveNoEffectTillEndOfMigration",
+      "Effect": "Allow",
+      "Action": [
+        "ce:Get*",
+        "ce:Describe*",
+        "ce:List*",
+        "account:GetAccountInformation",
+        "billing:Get*",
+        "payments:List*",
+        "payments:Get*",
+        "tax:List*",
+        "tax:Get*",
+        "consolidatedbilling:Get*",
+        "consolidatedbilling:List*",
+        "invoicing:List*",
+        "invoicing:Get*",
+        "cur:Get*",
+        "cur:Validate*",
+        "freetier:Get*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ThisPermissionWillContinueProvidingAccessAsNormal",
+      "Effect": "Allow",
+      "Action": "aws-portal:ViewBilling",
+      "Resource": "*"
+    }
+  ]
+}
+POLICY
+}
